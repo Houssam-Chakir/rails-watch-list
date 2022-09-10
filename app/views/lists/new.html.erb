@@ -1,0 +1,6 @@
+<%= render "layouts/navbar" %>
+
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name, label: 'Your list name please', error: 'list name is mandatory, please specify one' %>
+  <%= f.button :submit %>
+<% end %>

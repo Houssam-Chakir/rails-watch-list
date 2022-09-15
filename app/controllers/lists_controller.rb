@@ -21,6 +21,7 @@ before_action :select_list, only: %i[show destroy]
   def destroy
     @list.destroy
     redirect_to root_path, status: :see_other
+    # last line fixed the show issue, always put it for destroy
   end
 
   private

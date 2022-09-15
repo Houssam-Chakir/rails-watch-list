@@ -1,6 +1,6 @@
 <%= render "layouts/navbar" %>
 <div class="card p-3">
-<h1>Lists:</h1>
+<h3>Lists:</h3>
 
   <div class="row">
     <% @lists.each do |list| %>
@@ -9,6 +9,8 @@
       <div class="card-body">
         <h5 class="card-title"><%= list.name %></h5>
         <%= link_to "See list", list_path(list.id), class: "btn btn-primary" %>
+        <%= link_to "Delete", list_path(list.id), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "btn btn-danger" %>
+
       </div>
       </div>
     <% end %>

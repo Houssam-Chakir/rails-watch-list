@@ -1,6 +1,9 @@
-<div class="card col-2 m-3" style="width: 18rem;">
+<%= render "layouts/navbar" %>
+
+<div class="card col-2 m-3" style="width: 80%;">
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title"><%= @list.name %></h5>
+        <%= link_to "Delete", list_path(@list.id), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?', class: "btn btn-danger"} %>
       </div>
 </div>

@@ -40,19 +40,20 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
+gem 'bootsnap', '~> 1.13'
 
 gem "autoprefixer-rails"
 
 gem "font-awesome-sass", "~> 6.1"
+gem 'webpacker', '~> 3.5'
 
 gem "simple_form", github: "heartcombo/simple_form"
+gem 'psych', '< 4'
+# gem 'tmdb-api'
 
-gem 'tmdb-api'
+# gem 'themoviedb'
 
-gem 'themoviedb'
-
-gem "dotenv-rails", groups: [:development, :test]
+# gem "dotenv-rails", groups: [:development, :test]
 
 gem "cloudinary"
 
